@@ -23,33 +23,52 @@ JavaScript CodeStyle
   * В именовании аббревиатур соблюдаем `CamelCase`. Например: `Json`, `Xml`.
 
 ##Объявление переменных
-  * Все переменные объявляются с `var`.
+  * Все переменные объявленные через var должны быть объявлены в начале scope
+  * Переменные объявленные с помощью оператора let должны должны быть объявлены рядом с местом использования
   * Каждая переменная в пределах одной области видимости объявляется только один раз.
-  * Каждая переменная объявляется на новой строке. Это позволяет легко менять строки местами и подписывать к ним комментарии.
-  * Переменные объявляются как можно ближе к месту использования.
 
 **Хорошо:**
 ```javascript
-var keys = ['foo', 'bar'];
-var values = [23, 42];
 
-var object = {};
-while (items.length) {
-    var key = keys.pop();
-    object[key] = values.pop();
+function() {
+    var keys, values, object;
+    
+    keys = ['foo', 'bar'];
+    values = [23, 42];
+    object = {};
+    
+    while (items.length) {
+        let key = keys.pop();
+        object[key] = values.pop();
+    }
 }
+
 ```
 
 **Плохо:**
 ```javascript
-var keys = ['foo', 'bar'],
-    values = [23, 42],
-    object = {},
-    key;
+function() {
+    var keys = ['foo', 'bar'],
+        values = [23, 42],
+        object = {},
+        key;
+    
+    while (items.length) {
+        key = keys.pop();
+        object[key] = values.pop();
+    }
+}
 
-while (items.length) {
-    key = keys.pop();
-    object[key] = values.pop();
+function() {
+    var keys = ['foo', 'bar'];
+    var values = [23, 42];
+    
+    var object = {};
+    while (items.length) {
+        var key = keys.pop();
+        object[key] = values.pop();
+    }
+
 }
 ```
 
