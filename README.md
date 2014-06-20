@@ -1,8 +1,12 @@
 codestyle
 =========
 
-==Внешние ссылки:
+##Документация:
 [стиль кодирования на js](js.md)
+[по документированию](https://github.com/senchalabs/jsduck/wiki)
+
+##Внешние ссылки:
+
 
 [автоматическое кодревью jscs](https://github.com/mdevils/node-jscs)
 установка
