@@ -359,6 +359,16 @@ var foo = !bar;
 x === undefined;
 ```
 
+**Допустимо толькол для (null):**
+```javascript
+x == null;
+
+(x === undefined) // true
+//then
+(x == null) // true
+  
+```
+
 **Плохо:**
 ```javascript
 // в современных браузерах уже определен immutable undefined.
