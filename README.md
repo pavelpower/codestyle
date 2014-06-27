@@ -22,3 +22,12 @@ codestyle
 установка: 
 
     npm -g install jscs-jsdoc
+
+
+###CSS
+
+Для CSS так же используем инструментарий стилистики от разработчиков Yndex:
+
+[CSSCumb](https://github.com/csscomb/csscomb.js)
+
+он структуризирует css
