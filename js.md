@@ -207,6 +207,48 @@ if (test) return;
 if (test) { return; }
 ```
 
+  * Фигурные скобки также могут быть использованы для создания блочной конструкции с целью выделения участка кода из окружающего кода:
+
+```javascript
+expression1();
+
+{
+   function logicallyGroupedMethod1() {
+      // ...
+   }
+   function logicallyGroupedMethod2() {
+      // ...
+   }
+   function logicallyGroupedMethod3() {
+      // ...
+   }
+}
+
+expression2();
+```
+
+  * Впоследствии такая блочная конструкция может быть выделена в функцию, либо вынесена в отдельный файл:
+
+```javascript
+function callLogicalGroup() {
+   function logicallyGroupedMethod1() {
+      // ...
+   }
+   function logicallyGroupedMethod2() {
+      // ...
+   }
+   function logicallyGroupedMethod3() {
+      // ...
+   }
+}
+
+expression1();
+
+callLogicalGroup();
+
+expression2();
+```
+
 ##Условные инструкции
 ###if
   * `else` пишется на той же строке, что и закрывающая фигурная скобка
