@@ -13,7 +13,7 @@ codestyle
 
     npm install jscs -g
 
-[готовый config для CTI](https://github.com/pavelpower/node-jscs/blob/master/presets/cti.json)
+[готовый config для CTI](https://raw.githubusercontent.com/pavelpower/node-jscs/master/presets/cti.json)
 добавить конфиг в глобальную библиотеку (linux):
 
     cd /usr/local/lib/node_modules/jscs/presets && sudo wget https://github.com/pavelpower/node-jscs/blob/master/presets/cti.json
