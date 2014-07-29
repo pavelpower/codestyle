@@ -23,6 +23,12 @@ codestyle
 
     npm -g install jscs-jsdoc
 
+##Конфиг для codereview в RubyMine
+
+[CTI.xml](https://github.com/pavelpower/codestyle/blob/master/CTI.xml)
+
+   $ cd .RubyMine60/config/codestyle
+   $ wget https://raw.githubusercontent.com/pavelpower/codestyle/master/CTI.xml
 
 ###CSS
 
