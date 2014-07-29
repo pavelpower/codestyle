@@ -27,8 +27,10 @@ codestyle
 
 [CTI.xml](https://github.com/pavelpower/codestyle/blob/master/CTI.xml)
 
+   ```bash
    $ cd .RubyMine60/config/codestyle
    $ wget https://raw.githubusercontent.com/pavelpower/codestyle/master/CTI.xml
+   ```
 
 ###CSS
 
