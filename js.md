@@ -31,7 +31,7 @@ JavaScript CodeStyle
 **Хорошо:**
 ```javascript
 
-function() {
+function fn() {
     var keys, values, object;
     
     keys = ['foo', 'bar'];
@@ -48,7 +48,7 @@ function() {
 
 **Плохо:**
 ```javascript
-function() {
+function fn () {
     var keys = ['foo', 'bar'],
         values = [23, 42],
         object = {},
@@ -59,9 +59,15 @@ function() {
         object[key] = values.pop();
     }
 }
+````
 
-function() {
+* Допустимо, при необходимости дополнительной информации к переменным
+```javascript
+function fn2 () {
+    /** keys - список ключей к объекту */
     var keys = ['foo', 'bar'];
+    
+    /** values - список ключей к объекту */
     var values = [23, 42];
     
     var object = {};
@@ -151,7 +157,20 @@ var test = 'It shouldn\'t fail';
 ```
 
 ##Точка с запятой
-Точка с запятой ставится всегда.
+* Точка с запятой ставится всегда, при объявлении переменной, включая функции.
+```javascript
+  var a = 2;
+  var fn = function(n) {
+      return 2 * n;
+  };
+```
+
+* И не ставится если функция объявленна без присвоения ее переменной:
+```javascript
+function fn (n) {
+     return 2 * n;
+}
+```
 
 ##Пробелы
   * Ключевые слова отделяются пробелом:
